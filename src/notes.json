@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Buy groceries",
+    "body": "Buy milk, eggs, and bread from the supermarket.",
+    "isComplete": false,
+    "bgColor": "#FFEECC"
+  },
+  {
+    "title": "Finish project report",
+    "body": "Complete the annual report and send it to the manager.",
+    "isComplete": false,
+    "bgColor": "#CCE5FF"
+  },
+  {
+    "title": "Workout",
+    "body": "Go for a 30-minute run and do strength exercises.",
+    "isComplete": true,
+    "bgColor": "#CCFFCC"
+  },
+  {
+    "title": "Read a book",
+    "body": "Read 50 pages of the current novel.",
+    "isComplete": false,
+    "bgColor": "#FFCCCC"
+  }
+]
