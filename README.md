@@ -3,6 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.7.
 
 ## Concepts
+### Basic component anatomy
 The following is the anatomy of the component. The props `template` and `styles` can be replaced by `templateUrl` and `styleUrl` to point to the related file. To import a component, it has to be imported to the top _AND_ using the `imports` properties, which is an array.
 ```js
 import { Component1 } from './path-to-it'
@@ -20,7 +21,7 @@ export class TodoListItem {
 }
 ```
 
-Example using separated files.
+### Using separate files
 ```js
 @Component({
   standalone: true,
@@ -32,9 +33,10 @@ export class TodoListItem {
   /* Component behavior is defined in here, including methods */
   text = "Hello World";
   colors = [ "red", "blue", "green" ];
+  sayHelloWorld() { console.log(this.text); }
 }
 ```
-
+In the button is added a small user interaction; other interactions can be something `keyup` or `keydown` etc. It is also possible to pass the event using `$event` variable.
 ```html
 <div>
   @if (text.length() > 0) {
@@ -47,5 +49,6 @@ export class TodoListItem {
       <li>{{ color }}</li>
     }
   </ul>
+  <button (click)="sayHelloWorld()"></button>
 </div>
 ```
