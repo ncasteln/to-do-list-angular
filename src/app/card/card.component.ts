@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, Input, input } from '@angular/core';
 
 export interface Card {
+  id: number,
   title: string,
   body: string,
   bgColor: string,
-  isCompleted: boolean
+  isCompleted: boolean,
+  isEditMode: boolean
 }
 
 @Component({
@@ -15,22 +17,20 @@ export interface Card {
   styleUrl: './card.component.css'
 })
 export class CardComponent {
-  title = "title";
-  body = "ifuwe hfiweu hfeifu wehfiew uhwe iuh";
-  bgColor = "rgb(54, 54, 54)";
-  isCompleted = false;
-  editMode = false;
+  @Input() card: Card = {
+    id: -1,
+    title: "",
+    body: "",
+    bgColor: "",
+    isCompleted: false,
+    isEditMode: false
+  };
 
   toggleIsCompleted() {
-    if (!this.editMode) {
-      this.isCompleted = !this.isCompleted ;
-      this.isCompleted
-        ? this.bgColor = "rgb(47, 125, 27)"
-        : this.bgColor = "rgb(54, 54, 54)";
-    }
+    this.card.isCompleted = !this.card.isCompleted;
   };
   editBody() {
     // need implementation
-    // this.editMode = true;
+    // this.card.isEditMode = true;
   }
 };

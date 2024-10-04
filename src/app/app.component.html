@@ -12,7 +12,11 @@
     <h1>{{ title }}</h1>
     <h2>{{ subtitle }}</h2>
   </div>
-  <app-card></app-card>
+  <div class="cards-container">
+    @for (card of cards; track card.id) {
+      <app-card [card]="card"></app-card>
+    }
+  </div>
 </main>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->

@@ -3,24 +3,28 @@
     "title": "Buy groceries",
     "body": "Buy milk, eggs, and bread from the supermarket.",
     "isComplete": false,
-    "bgColor": "#FFEECC"
+    "bgColor": "#FFEECC",
+    "isEditMode": false
   },
   {
     "title": "Finish project report",
     "body": "Complete the annual report and send it to the manager.",
     "isComplete": false,
-    "bgColor": "#CCE5FF"
+    "bgColor": "#CCE5FF",
+    "isEditMode": false
   },
   {
     "title": "Workout",
     "body": "Go for a 30-minute run and do strength exercises.",
     "isComplete": true,
-    "bgColor": "#CCFFCC"
+    "bgColor": "#CCFFCC",
+    "isEditMode": false
   },
   {
     "title": "Read a book",
     "body": "Read 50 pages of the current novel.",
     "isComplete": false,
-    "bgColor": "#FFCCCC"
+    "bgColor": "#FFCCCC",
+    "isEditMode": false
   }
 ]
