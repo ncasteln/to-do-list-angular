@@ -52,3 +52,23 @@ In the button is added a small user interaction; other interactions can be somet
   <button (click)="sayHelloWorld()"></button>
 </div>
 ```
+
+## Dependency injection
+1. Create an injectable service
+```bash
+ng generate service [folder-name]/[service-name]
+```
+```js
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class NameService {
+  constructor(/* if HTTP client, need to be injected here */) {}
+}
+```
+2. Inject the service by providing it in the constructor.
+```js
+
+```
