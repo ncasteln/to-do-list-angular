@@ -1,0 +1,7 @@
+<main class="main">
+  <div class="cards-container">
+    @for (card of cards; track card.id) {
+      <app-card [card]="card"></app-card>
+    }
+  </div>
+</main>
