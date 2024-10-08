@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { NavigationExtras, Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 export interface Card {
   id: number,
@@ -12,7 +13,10 @@ export interface Card {
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports: [],
+  imports: [
+    RouterLink,
+    RouterOutlet,
+    RouterLinkActive],
   templateUrl: './card.component.html',
   styleUrl: './card.component.css'
 })
@@ -26,11 +30,12 @@ export class CardComponent {
     isEditMode: false
   };
 
+  constructor( private router: Router ) {}
+
   toggleIsCompleted() {
     this.card.isCompleted = !this.card.isCompleted;
   };
-  editBody() {
-    // need implementation
-    // this.card.isEditMode = true;
+
+  openDetails() {
   }
 };

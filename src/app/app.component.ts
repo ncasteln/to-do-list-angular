@@ -20,19 +20,15 @@ import { CardListComponent } from './card-list/card-list.component';
 })
 export class AppComponent {
   readonly URL = 'https://run.mocky.io/v3/5d819734-b282-459a-8539-389e2a214744';
-  // cards: Card[] | null = null;
+  constructor( private router: Router ) {};
 
-  constructor(
-    // private httpClient: HttpClient,
-    private router: Router
-  ) {};
+  /*
+    CHANGE APPROACH TO PASS DATA IN ROUTING:
+    understand how this works, probbly with rxJs according to a couple of answers and phind.
+    Understand state handling in general a bit an then rxtract the card fetching into
+    a state, which can be retrieved into the card-details component.
+  */
 
-  // ngOnInit() {
-  //   this.httpClient.get<Card[]>(this.URL).subscribe(res => {
-  //     console.log(res);
-  //     this.cards = res;
-  //   })
-  // }
 }
 
 /*
